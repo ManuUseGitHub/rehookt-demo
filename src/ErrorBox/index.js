@@ -1,10 +1,11 @@
 import React from 'react';
 
-export default ( { hinting } ) => {
-    const { errors } = hinting;
+const _ = ( { hinting } ) => {
+    const { errors, listing } = hinting;
 
+    console.log(listing)
     const showErrorBox = ( ) => {
-        if( errors.val ){ 
+        if( errors.val && listing.val !== ""){ 
             return (
                 <div  id="error" className="col-sm-12">
                     <h3>Error box :</h3>
@@ -17,3 +18,5 @@ export default ( { hinting } ) => {
     }
     return <React.Fragment>{ showErrorBox( ) }</React.Fragment>
 }
+
+export default _;

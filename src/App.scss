@@ -1,5 +1,17 @@
+body{
+  background-color:black !important;
+  background-position: center top;
+  background-size: cover;
+  background-image: url(./assets/black-sand-texture-4k-macro-sand-backgrounds-sand-dunes.jpeg);
+}
+
 .App {
   text-align: center;
+  background: radial-gradient(transparent, #00000077);
+  filter: drop-shadow(2px 4px 6px black);
+  height:100vh;
+  position: relative;
+  overflow-y: auto;
 }
 
 .App-logo {
@@ -14,7 +26,24 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  h1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    background: transparent;
+    align-items: end;
+    font-family: monospace;
+    color: grey;
+  }
+  img {
+    margin-right: 10px;
+  }
+  text-align:left;
+  background:white;
+  padding:50px 0;
+}
+
+.content {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -34,6 +63,17 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+div#listing:first-child {
+  background: transparent;
+  box-shadow: none;
+  text-align: center;
+  flex-flow: column;
+
+  input{
+    background: #fffA !important;
   }
 }
 
