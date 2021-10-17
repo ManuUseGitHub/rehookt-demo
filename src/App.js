@@ -18,6 +18,8 @@ function App( ) {
 
   const { listing, timing, errors, hint } = useStates( [ "listing", listingV ], "timing", "errors", "hint" );
 
+  const attr = { placeholder : "Type your hooks here all separated by spaces" };
+
   const onListingChanged = ( {value} ) => {
 
       if( timing.val ){
@@ -45,7 +47,7 @@ function App( ) {
           <div id="listing" className='row'>
             <div classNames="col-sm-12"><h2> Listing </h2>
               <label>hook list</label>
-              <HookedField hook={ listing } cb={ onListingChanged }/>
+              <HookedField hook={ listing } cb={ onListingChanged } attr={attr}/>
               <div><h5 className='inputHints'>Input words separated by a space between each element. Enter only "REHOOKT_NONE" if you want to have an empty set of hooks</h5></div>
             </div>
           </div>

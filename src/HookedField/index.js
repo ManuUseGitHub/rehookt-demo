@@ -1,10 +1,10 @@
 
 import React from 'react';
 
-export default ( { hook, name, attr, cb = null } ) => {
+const _ = ( { hook, name, attr, cb = null } ) => {
     
-    const {
-        placeholder = "",
+    let {
+        placeholder ,
         style = {},
         disabled = false,
         classNames =""
@@ -31,3 +31,5 @@ export default ( { hook, name, attr, cb = null } ) => {
         /> 
     )
 }
+
+export default _;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ( { hinting } ) => {
+const _ =( { hinting } ) => {
     const { errors } = hinting;
 
     const showErrorBox = ( ) => {
@@ -18,3 +18,5 @@ export default ( { hinting } ) => {
     
     return <React.Fragment>{ showErrorBox( ) }</React.Fragment>
 }
+
+export default _;
